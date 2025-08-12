@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando APIs</title>
+</head>
+
+<body>
+    <script>
+        const request = new XMLHttpRequest();
+        request.open("GET", "https://api.restful-api.dev/objects");
+        request.send();
+        request.onload = () => {
+            if (request.status === 200) {
+                const itens = JSON.parse(request.responseText);
+                console.log(itens);
+                console.log(users[2].id)
+            } else {
+                console.log("Erro:", request.status);
+            }
+        };
+    </script>
+</body>
+
+</html>
+
+1 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+2 eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.
+3 SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
