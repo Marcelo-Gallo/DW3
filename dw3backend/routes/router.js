@@ -4,6 +4,8 @@ const routerApp = express.Router();
 const appAlunos = require("../apps/alunos/controller/ctlAlunos");
 const appCursos = require("../apps/cursos/controller/ctlCursos");
 const appLogin = require("../apps/login/controller/ctlLogin");
+const appClientes = require("../apps/clientes/controller/ctlClientes");
+const appPedidos = require("../apps/pedidos/controller/ctlPedidos");
 
 // Middleware que é específico para este router
 routerApp.use((req, res, next) => {
@@ -27,6 +29,20 @@ routerApp.post("/GetCursoByID", appCursos.GetCursoByID);
 routerApp.post("/InsertCursos", appCursos.InsertCursos);
 routerApp.post("/UpdateCursos", appCursos.UpdateCursos);
 routerApp.post("/DeleteCursos", appCursos.DeleteCursos);
+
+// Rotas de Clientes
+routerApp.get("/GetAllClientes", appLogin.AutenticaJWT, appClientes.getAllClientes);
+routerApp.post("/GetClienteByID", appLogin.AutenticaJWT, appClientes.getClienteByID);
+routerApp.post("/InsertClientes", appLogin.AutenticaJWT, appClientes.insertClientes);
+routerApp.post("/UpdateClientes", appLogin.AutenticaJWT, appClientes.updateClientes);
+routerApp.post("/DeleteClientes", appLogin.AutenticaJWT, appClientes.deleteClientes);
+
+// Rotas de Pedidos
+routerApp.get("/GetAllPedidos", appLogin.AutenticaJWT, appPedidos.getAllPedidos);
+routerApp.post("/GetPedidoByID", appLogin.AutenticaJWT, appPedidos.getPedidoByID);
+routerApp.post("/InsertPedidos", appLogin.AutenticaJWT, appPedidos.insertPedidos);
+routerApp.post("/UpdatePedidos", appLogin.AutenticaJWT, appPedidos.updatePedidos);
+routerApp.post("/DeletePedidos", appLogin.AutenticaJWT, appPedidos.deletePedidos);
 
 // Rota Login
 routerApp.post("/Login", appLogin.Login);
