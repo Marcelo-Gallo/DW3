@@ -21,7 +21,7 @@ content-type: application/json
 Authorization: Bearer {{accessToken}}
 
 {
-    "pedidoid": 1
+    "pedidoid": 9
 }
 
 ### teste de inserção de pedido
@@ -30,10 +30,10 @@ content-type: application/json
 Authorization: Bearer {{accessToken}}
 
 {
-    "numero": 1001,
-    "data": "2025-09-16",
-    "valortotal": 150.75,
-    "clienteid": 1
+    "numero": 1229,
+    "data": "2025-08-16",
+    "valortotal": 194.99,
+    "clienteid": 2
 }
 
 ### teste de atualização de pedido
@@ -42,11 +42,11 @@ content-type: application/json
 Authorization: Bearer {{accessToken}}
 
 {
-    "pedidoid": 2,
-    "numero": 1001,
+    "pedidoid": 9,
+    "numero": 1031,
     "data": "2025-09-17",
-    "valortotal": 250.00,
-    "clienteid": 2
+    "valortotal": 259.34,
+    "clienteid": 3
 }
 
 ### teste de deleção de pedido
@@ -55,5 +55,5 @@ content-type: application/json
 Authorization: Bearer {{accessToken}}
 
 {
-    "pedidoid": 2
+    "pedidoid": 9
 }
