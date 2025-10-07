@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var alunosApp = require("../apps/alunos/controller/ctlAlunos")
+var alunosApp = require("../apps/alunos/controller/ctlAlunos");
 
 
 
